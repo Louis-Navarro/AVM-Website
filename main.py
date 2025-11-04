@@ -46,8 +46,9 @@ def fill_values(house: dict):
 
 model = ai.load_model()
 
-st.set_page_config(page_title="AVM")
-st.title("Property Price Prediction")
+st.set_page_config(
+    page_title="Property Price Evaluation")
+st.title("Automated Property Price Evaluation in England and Wales")
 
 col1, col2, col3 = st.columns([1, 1, 1])
 
@@ -470,4 +471,4 @@ if submit:
     price = ai.predict(
         model, [district, type, "N" if age == "New" else "O", duration, size, habitable_rooms])
 
-    st.success(f"The predicted property price is: £{price:,.0f}")
+    st.success(f"The evaluated property price is: £{price:,.0f}")

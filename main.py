@@ -465,7 +465,7 @@ district = st.selectbox(
                                                'ADUR'))
 )
 
-submit = st.button("Predict Property Price")
+submit = st.button("Evaluate Property")
 
 if submit:
     price = ai.predict(
